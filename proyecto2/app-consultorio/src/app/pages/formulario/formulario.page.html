@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar  class="color-oscuro">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="">Formulario de registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="color-oscuro">
+
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Rut:</ion-label>
+    <ion-input type="text" [(ngModel)]="rut"  placeholder="11.111.111-1" required></ion-input>
+  </ion-item>
+ 
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Primer Nombre:</ion-label>
+    <ion-input type="text" [(ngModel)]="primerNombre" maxlength=10 minlength=3 required></ion-input>
+  </ion-item>
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Segundo Nombre:</ion-label>
+    <ion-input type="text" [(ngModel)]="segundoNombre" maxlength=10 minlength=3 required></ion-input>
+  </ion-item>
+
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Apellido Paterno:</ion-label>
+    <ion-input type="text" [(ngModel)]="apPaterno" maxlength=15 minlength=5 required></ion-input>
+  </ion-item>
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Apellido Materno:</ion-label>
+    <ion-input type="text" [(ngModel)]="apMaterno" maxlength=15 minlength=5 required></ion-input>
+  </ion-item>
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked" class="ion-padding-bottom">Genero</ion-label>
+    <ion-select  class="custom-options" [(ngModel)]="genero"  >
+      <ion-select-option value="Femenino">Femenino</ion-select-option>
+      <ion-select-option value="Masculino">Masculino</ion-select-option>
+      <ion-select-option value="Otros">Otro</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked" class="ion-padding-bottom">Fecha Nacimiento:</ion-label>
+    <ion-input type="date" [(ngModel)]="fechaNacimiento" required></ion-input>
+  </ion-item>
+
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Correo:</ion-label>
+    <ion-input type="email" [(ngModel)]="Correo" maxlength=25 minlength=5 placeholder="ejemplo@gmail.com" required></ion-input>
+  </ion-item>
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Telefono</ion-label>
+    <ion-input type="text" [(ngModel)]="telefono" required></ion-input>
+  </ion-item>
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked" class="ion-padding-bottom">Comuna</ion-label>
+    <!-- Guardando la opcion seleccionada: userPerfil -->
+    <ion-select placeholder="Seleccione comuna" required [(ngModel)]="comuna">
+      <!-- *ngFor: Indica que con la instancia niv del arreglo niveles se recorrerá las cantidades de id del arreglo -->
+      <ion-select-option *ngFor="let com of comuna">{{com.nombreComuna}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Calle</ion-label>
+    <ion-input type="text" [(ngModel)]="calle" required></ion-input>
+  </ion-item>
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Numeración</ion-label>
+    <ion-input type="text" [(ngModel)]="numeracion" required></ion-input>
+  </ion-item>
+
+  <ion-item class=" color-oscuro ion-padding-horizontal" >
+    <ion-label position="stacked">Contraseña:</ion-label>
+    <ion-input type="password" [(ngModel)]="contrasena" maxlength=8 minlength=3 required></ion-input>
+  </ion-item>
+
+  <ion-button expand="block"  class="color-claro ion-margin-top" (click)="registrarUsuario()" >Registrarse</ion-button>
+  <ion-button [routerLink]="['/login']" expand="block" class="color-claro ion-margin-top"  >Regresar</ion-button>
+
+</ion-content>

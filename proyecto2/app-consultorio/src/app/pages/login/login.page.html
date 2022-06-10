@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar class="color-oscuro">
+    <ion-title >Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="color-oscuro ion-padding" >
+  <ion-toolbar style='text-align:center'class="color-oscuro">
+    <h3> Consultorio Metropolitano</h3>
+  </ion-toolbar>
+
+  <ion-card class="color-oscuro">
+    <ion-img src="assets/imagen/pngegg.png"></ion-img>
+  </ion-card>   
+
+    <ion-item class="color-oscuro ion-margin-top">
+      <ion-label position="floating">Rut</ion-label>
+      <ion-input [(ngModel)]="rut"></ion-input>
+    </ion-item>
+    <ion-item class="color-oscuro ion-margin-top">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
+    </ion-item>
+  
+    
+    <ion-button expand="block" class="color-claro ion-margin-top" (click)= "ingresar()" >Ingresar</ion-button>
+    <ion-button [routerLink]="['/formulario']" expand="block" class="color-claro ion-margin-top"  >Registrarse</ion-button>
+    <ion-button [routerLink]="['/recuperar-pass']"expand="block" color="light" class="ion-margin-top" >
+    ¿Olvidaste tu contraseña?
+    </ion-button>
+ 
+    
+</ion-content>

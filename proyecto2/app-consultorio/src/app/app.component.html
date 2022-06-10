@@ -1,0 +1,24 @@
+<ion-app>
+
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar class="color-claro">
+        <ion-title >Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content >
+      <ion-list >
+        <ion-item [routerLink]="['/reserva-hora']">Agendar hora</ion-item>
+        <ion-item [routerLink]="['/examenes']">Examenes</ion-item>
+        <ion-item [routerLink]="['/']">Diagnosticos</ion-item>
+        <ion-item [routerLink]="['/']">Historial </ion-item>
+        <ion-item [routerLink]="['/buscar']">Buscar paciente </ion-item>
+        <ion-item color="danger" [routerLink]="['/']">Cerrar Sesión </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
+ 

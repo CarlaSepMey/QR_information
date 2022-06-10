@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar class="color-oscuro">
+    <ion-title>Reserva de hora</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+
+  
+<ion-content  class="color-oscuro ion-padding"  >
+  <ion-card class="color-oscuro">
+    
+      <ion-img src="assets/imagen/pngegg.png"></ion-img>
+   
+  </ion-card>  
+  
+  
+
+  <ion-card>
+    <ion-item color="light" class="ion-padding-horizontal">
+      <ion-label  position="stacked">Ingrese rut:</ion-label>
+      <ion-input  type="text"   placeholder="11.111.111-1" required></ion-input>
+    </ion-item>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item class="ion-padding-horizontal">
+      <ion-label position="stacked" class="ion-padding-bottom">Medico</ion-label>
+      <ion-select  class="custom-options" >
+        <ion-select-option value="matrona">Matrona</ion-select-option>
+        <ion-select-option value="medicoGeneral">Medico General</ion-select-option>
+        <ion-select-option value="kinesiologo">kinesiologo</ion-select-option>
+        <ion-select-option value="Psicologo">psicologo</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  
+  <ion-card>
+    <ion-toolbar>
+      <ion-searchbar></ion-searchbar>
+    </ion-toolbar> 
+  </ion-card>
+  
+  <ion-card>
+    <ion-item class="ion-padding-horizontal">
+      <ion-label position="stacked" class="ion-padding-bottom">Escoja Consultorio </ion-label>
+      <ion-select  class="custom-options" >
+        <ion-select-option value="Consultorio1">Consultorio 1</ion-select-option>
+        <ion-select-option value="Consultorio2">Consultorio 2 </ion-select-option>
+        <ion-select-option value="Consultorio3">Consultorio 3</ion-select-option>
+        <ion-select-option value="Consultorio4">Consultorio 4</ion-select-option>
+        <ion-select-option value="Consultorio5">Consultorio 5</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item class="ion-padding-horizontal">
+      <ion-label position="stacked" class="ion-padding-bottom">Seleccione fecha</ion-label>
+      <ion-input type="date" [(ngModel)]="fechaConsulta"  max="2022-06-06" min="2022-05-05" required></ion-input>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-button [routerLink]="['/']" expand="block" class="color-claro ion-margin-top">Tomar hora</ion-button>
+  <ion-button [routerLink]="['/anular-hora']" expand="block" class="color-claro ion-margin-top"  >Anular hora</ion-button>
+  <ion-button [routerLink]="['/inicio']" expand="block" class="color-claro ion-margin-top"  >Regresar al inicio</ion-button>
+  
+  
+</ion-content>
+
+
+

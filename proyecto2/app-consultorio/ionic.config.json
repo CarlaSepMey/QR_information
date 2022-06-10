@@ -1,0 +1,7 @@
+{
+  "name": "app-consultorio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
